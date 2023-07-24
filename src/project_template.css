@@ -1,0 +1,89 @@
+.project_container {
+  position: absolute;
+  /* background-color: hsla(0, 0%, 0%, 0.8); */
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.project_background {
+  background-color: crimson;
+  position: relative;
+  width: 80%;
+  max-width: 1100px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main_image {
+  background-color: darkcyan;
+  /* position: relative; */
+  width: 80%;
+  height: 40%;
+  border: 1px solid white;
+}
+
+.info_image {
+  background-color: darkseagreen;
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tools_used {
+  background-color: yellow;
+  width: 90%;
+  height: 3%;
+}
+
+.info {
+  background-color: darkmagenta;
+  width: 70%;
+  height: 100%;
+}
+
+.images {
+  background-color: darkorange;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.images > * {
+  background-color: maroon;
+  width: 90%;
+  height: calc(100% / 5);
+  border: 1px solid white;
+}
+
+.exit_project {
+  /* background-color: rgb(255, 255, 255); */
+  width: 30px;
+  height: 30px;
+  align-self: self-end;
+  position: relative;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.exit_project > * {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  fill: rgb(255, 255, 255);
+}
+
+.exit_project:hover {
+  transform: scale(1.2);
+}

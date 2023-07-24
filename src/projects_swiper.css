@@ -1,0 +1,201 @@
+.container {
+  background: linear-gradient(to top, hsla(0, 0%, 0%, 1), hsla(0, 0%, 0%, 0)),
+    linear-gradient(
+      to left,
+      hsla(0, 0%, 0%, 1),
+      hsla(0, 0%, 0%, 0.9),
+      hsla(0, 0%, 0%, 0)
+    );
+  height: 100vh;
+  width: 100%;
+}
+
+.swiper {
+  /* background-color: aqua; */
+  width: 100%;
+  height: 60vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.swiper-slide {
+  /* background-color: darkblue; */
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--main_tittle_color) !important;
+}
+
+.project_cards {
+  background-size: cover;
+  width: 100%;
+  height: 90%;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.server {
+  background-image: url(../public/images/server_image.jpg);
+  background-size: cover;
+}
+
+.stock_app {
+  background-image: url(../public/images/stock_app.jpg);
+}
+
+.nasa_rover {
+  background-image: url(../public/images/nasa_rover.jpg);
+}
+
+.professor_class_matching {
+  background-image: url(../public/images/class_professors_matching.jpg);
+}
+
+.shooting_range {
+  background-image: url(../public/images/shooting_practice_target.jpg);
+}
+
+@media (hover) {
+  .server:hover .card_title::after,
+  .server:focus-within .card_title::after,
+  .stock_app:hover .card_title::after,
+  .stock_app:focus-within .card_title::after,
+  .nasa_rover:hover .card_title::after,
+  .nasa_rover:focus-within .card_title::after,
+  .professor_class_matching:hover .card_title::after,
+  .professor_class_matching:focus-within .card_title::after,
+  .shooting_range:hover .card_title::after,
+  .shooting_range:focus-within .card_title::after,
+  .manual_trigger .card_title::after {
+    transform: scaleX(1);
+  }
+
+  .server:hover .content,
+  .stock_app:hover .content,
+  .nasa_rover:hover .content,
+  .professor_class_matching:hover .content,
+  .shooting_range:hover .content,
+  .server:focus-within .content,
+  .stock_app:focus-within .content,
+  .nasa_rover:focus-within .content,
+  .professor_class_matching:focus-within .content,
+  .shooting_range:focus-within .content {
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
+
+  .server:hover .content > *,
+  .stock_app:hover .content > *,
+  .nasa_rover:hover .content > *,
+  .professor_class_matching:hover .content > *,
+  .shooting_range:hover .content > *,
+  .server:focus-within .content > *,
+  .stock_app:focus-within .content > *,
+  .nasa_rover:focus-within .content > *,
+  .professor_class_matching:focus-within .content > *,
+  .shooting_range:focus-within .content > * {
+    opacity: 1;
+    transition-delay: 1000ms;
+  }
+
+  .content {
+    transform: translateY(90%);
+    transition: transform 500ms ease;
+  }
+
+  .content > *:not(.card_title) {
+    opacity: 0;
+    transition: opacity 500ms ease;
+  }
+
+  .card_title::after {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+  }
+}
+
+.content {
+  position: absolute;
+  background: linear-gradient(
+    hsla(0, 0%, 0%, 0),
+    hsla(0, 0%, 0%, 0.5) 2%,
+    hsla(0, 0%, 0%, 0.7) 4%,
+    hsla(0, 0%, 0%, 0.9) 75%
+  );
+  font-size: 11px;
+  height: 90%;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+}
+
+.card_title {
+  position: relative;
+  width: max-content;
+  padding: 0 0 0 1.5rem;
+}
+
+.container button {
+  position: absolute;
+  font-size: 15px;
+  white-space: nowrap;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%);
+}
+
+.card_title::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: 4px;
+  width: 100%;
+  left: 0;
+  top: 120%;
+  border-radius: 0 0 20px 20px;
+}
+
+.card_description {
+  position: relative;
+  color: white;
+}
+
+.projects_title {
+  position: relative;
+  width: fit-content;
+  font-size: 40px;
+  left: 70%;
+  top: 13%;
+}
+
+.shine_title {
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    var(--main_tittle_color) 20%,
+    #ffffff 30%,
+    var(--main_tittle_color) 70%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

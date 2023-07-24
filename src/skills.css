@@ -1,0 +1,203 @@
+.skills {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* .separator {
+  background-image: linear-gradient(
+    hsla(102, 100%, 54%, 0),
+    hsla(120, 100%, 32.9%, 0.3),
+    hsla(102, 100%, 54%, 0)
+  );
+  width: 100%;
+  height: 20vh;
+} */
+
+.skills_and_expertice {
+  position: relative;
+  width: min-content;
+  font-size: 40px;
+  left: 40%;
+  top: 10%;
+  /* padding-bottom: 20%; */
+}
+
+.all_icons {
+  position: relative;
+  /* background-color: aliceblue; */
+  width: 40%;
+  height: 80%;
+  left: 1%;
+  display: flex;
+  top: 3%;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.see_all_icon_names_states {
+  position: absolute;
+  left: 3%;
+  bottom: 0%;
+  width: max-content;
+}
+
+.icon_container {
+  position: relative;
+  /* background-color: rgb(255, 225, 0); */
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.icon_container::before {
+  /* background-color: aliceblue; */
+  position: absolute;
+  width: max-content;
+  font-size: 16px;
+  bottom: 143%;
+  left: 80%;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  fill: var(--main_tittle_color);
+}
+
+.icon_column {
+  display: flex;
+  justify-content: space-around;
+}
+
+.c_1 {
+  bottom: 50%;
+}
+
+.c_3 {
+  top: 50%;
+}
+
+.c::before {
+  content: "C";
+  left: 125%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.c_plus_plus::before {
+  content: "C + +";
+  left: 110%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.python::before {
+  content: "python";
+  left: 93%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.javascript::before {
+  content: "javascript";
+  left: 80%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.java::before {
+  content: "java";
+  left: 105%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.sql::before {
+  content: "sql";
+  left: 110%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.html_::before {
+  content: "html";
+  left: 105%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.css_::before {
+  content: "css";
+  left: 110%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.git_::before {
+  content: "git";
+  left: 110%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.show_titles::before {
+  opacity: 1;
+  transition-delay: 2000ms;
+}
+
+.c:hover::before,
+.c_plus_plus:hover::before,
+.python:hover::before,
+.javascript:hover::before,
+.java:hover::before,
+.sql:hover::before,
+.html_:hover::before,
+.css_:hover::before,
+.git_:hover::before {
+  transition-delay: 2000ms;
+  opacity: 1;
+}
+
+.skill_percentage {
+  /* background-color: mediumturquoise; */
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 109%;
+  left: -50%;
+  color: white;
+}
+
+.expertice {
+  /* background-color: white; */
+  width: 45%;
+  height: 100vh;
+}
+
+.expertice_paragraph {
+  background-image: radial-gradient(white 0.5px, transparent 1px);
+  background-size: 25px 25px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  position: relative;
+  top: 15%;
+  min-width: 510px;
+  max-width: 700px;
+  height: 65%;
+}
+
+.expertice_header {
+  position: relative;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.expertice_paragraph .paragraph {
+  color: white;
+}

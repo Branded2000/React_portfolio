@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './nav';
+import MatrixBackground from './matrix';
+import NameAndPhoto from './shineText_image';
+import ProjectSwiper from './projects_swiper';
+import Skills from './skills';
+import About from './about';
 
-function App() {
+function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="Home" id='main_page'>
+        <MatrixBackground />
+        <div className='header-filler'></div>
+        <div className="Home-header">
+          <NavBar />
+        </div>
+        <div className='Home-body'>
+          <NameAndPhoto />
+          <ProjectSwiper />
+          <Skills />
+          <About />
+        </div>
+      </div>
+    </>
   );
 }
 
-export default App;
+export default Home;
