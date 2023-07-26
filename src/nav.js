@@ -37,7 +37,7 @@ function NavBar() {
                         <li><a href="#about">About</a></li>
                     </ul>
                     <a className="CustomButton" href="#contact">
-                        <button>Contact</button>
+                        <button>Resume</button>
                     </a>
                 </motion.nav>}
             </AnimatePresence>

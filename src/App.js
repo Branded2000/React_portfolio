@@ -5,6 +5,8 @@ import NameAndPhoto from './shineText_image';
 import ProjectSwiper from './projects_swiper';
 import Skills from './skills';
 import About from './about';
+import Contact from './contact';
+
 
 function Home() {
   return (
@@ -20,6 +22,7 @@ function Home() {
           <ProjectSwiper />
           <Skills />
           <About />
+          <Contact />
         </div>
       </div>
     </>

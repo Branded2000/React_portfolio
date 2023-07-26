@@ -16,6 +16,9 @@
 /* .Home {
   background-color: rgba(0, 0, 0, 0.9);
 } */
+html {
+  scroll-behavior: smooth;
+}
 
 .Home-header {
   /* flex: 0 1 auto; */

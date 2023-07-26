@@ -22,7 +22,7 @@ function Progressbar({ percentage, percentage_val, color }) {
                     <div>%</div>
                 </div>
                 <motion.div className='bar' style={{ backgroundColor: color }}
-                    key='nav'
+                    key='bar'
                     initial={{ width: "0%" }}
                     animate={{ width: percentage }}
                     transition={{ duration: 2, ease: "easeOut" }}>

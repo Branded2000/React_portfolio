@@ -26,11 +26,11 @@
   /* padding-bottom: 20%; */
 }
 
-.all_icons {
+.all_skill_icons {
   position: relative;
   /* background-color: aliceblue; */
-  width: 40%;
-  height: 80%;
+  width: 37%;
+  height: 88%;
   left: 1%;
   display: flex;
   top: 3%;
@@ -48,10 +48,10 @@
 .icon_container {
   position: relative;
   /* background-color: rgb(255, 225, 0); */
-  width: 100px;
-  height: 100px;
-  min-width: 100px;
-  min-height: 100px;
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  min-height: 80px;
 }
 
 .icon_container::before {
@@ -59,8 +59,8 @@
   position: absolute;
   width: max-content;
   font-size: 16px;
-  bottom: 143%;
-  left: 80%;
+  bottom: 155%;
+  color: white;
 }
 
 .icon {
@@ -84,63 +84,63 @@
 
 .c::before {
   content: "C";
-  left: 125%;
+  left: 145%;
   opacity: 0;
   transition: opacity 500ms ease;
 }
 
 .c_plus_plus::before {
   content: "C + +";
-  left: 110%;
+  left: 125%;
   opacity: 0;
   transition: opacity 500ms ease;
 }
 
 .python::before {
   content: "python";
-  left: 93%;
+  left: 100%;
   opacity: 0;
   transition: opacity 500ms ease;
 }
 
 .javascript::before {
   content: "javascript";
-  left: 80%;
+  left: 85%;
   opacity: 0;
   transition: opacity 500ms ease;
 }
 
 .java::before {
   content: "java";
-  left: 105%;
+  left: 115%;
   opacity: 0;
   transition: opacity 500ms ease;
 }
 
 .sql::before {
   content: "sql";
-  left: 110%;
+  left: 125%;
   opacity: 0;
   transition: opacity 500ms ease;
 }
 
 .html_::before {
   content: "html";
-  left: 105%;
+  left: 115%;
   opacity: 0;
   transition: opacity 500ms ease;
 }
 
 .css_::before {
   content: "css";
-  left: 110%;
+  left: 125%;
   opacity: 0;
   transition: opacity 500ms ease;
 }
 
 .git_::before {
   content: "git";
-  left: 110%;
+  left: 125%;
   opacity: 0;
   transition: opacity 500ms ease;
 }
@@ -185,10 +185,13 @@
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   position: relative;
-  top: 15%;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%);
   min-width: 510px;
   max-width: 700px;
-  height: 65%;
+  height: 50%;
+  z-index: 2;
 }
 
 .expertice_header {
@@ -196,8 +199,94 @@
   width: fit-content;
   left: 50%;
   transform: translateX(-50%);
+  color: white;
 }
 
 .expertice_paragraph .paragraph {
   color: white;
+}
+
+.tech_stack {
+  position: relative;
+  /* background-color: rgb(255, 255, 255); */
+  width: 510px;
+  height: 15%;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.stack_icon_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stack_title {
+  position: relative;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: larger;
+  color: white;
+}
+
+.flask {
+  fill: white;
+}
+
+.vuejs > * {
+  fill: white !important;
+  width: 100%;
+  height: 100%;
+}
+
+.react_icon > * {
+  fill: white !important;
+  width: 100%;
+  height: 100%;
+}
+
+.flask::after {
+  content: "Flask";
+}
+
+.react_icon::after {
+  content: "React";
+}
+
+.vuejs::after {
+  content: "Vue.js";
+}
+
+.bulma::after {
+  content: "Bulma";
+}
+
+.django::after {
+  content: "Django";
+  left: 0 !important;
+}
+
+.flask::after,
+.react_icon::after,
+.vuejs::after,
+.bulma::after,
+.django::after {
+  position: absolute;
+  width: fit-content;
+  height: 10px;
+  top: 100%;
+  left: 10%;
+  color: white;
+  opacity: 0;
+}
+
+.flask:hover::after,
+.react_icon:hover::after,
+.vuejs:hover::after,
+.bulma:hover::after,
+.django:hover::after {
+  opacity: 1;
 }

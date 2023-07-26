@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/work_not_for_production
 
 # testing
 /coverage
