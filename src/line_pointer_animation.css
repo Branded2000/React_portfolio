@@ -15,3 +15,10 @@
   bottom: 80%;
   left: 50%;
 }
+
+@media (width < 655px) {
+  .svg_lines {
+    left: 25%;
+    bottom: 85%;
+  }
+}

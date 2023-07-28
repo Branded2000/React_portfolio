@@ -11,7 +11,7 @@ import Contact from './contact';
 function Home() {
   return (
     <>
-      <div className="Home" id='main_page'>
+      <section className="Home" id='main_page'>
         <MatrixBackground />
         <div className='header-filler'></div>
         <div className="Home-header">
@@ -24,7 +24,7 @@ function Home() {
           <About />
           <Contact />
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -149,7 +149,7 @@ function Skills() {
 
     return (
         <>
-            <div className='skills' id="skills">
+            <section className='skills' id="skills">
                 {/* <div className='separator'></div> */}
 
                 <div className='all_skill_icons'>
@@ -288,7 +288,7 @@ function Skills() {
 
                     </div>
                 </div>
-            </div>
+            </section>
         </>);
 }
 

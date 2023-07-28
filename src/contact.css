@@ -6,3 +6,9 @@
   justify-content: center;
   font-size: x-small;
 }
+
+@media (width < 650px) {
+  .contact > * {
+    width: min-content;
+  }
+}

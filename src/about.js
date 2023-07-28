@@ -58,7 +58,7 @@ function About() {
 
     return (
         <>
-            <div className='about' id="about">
+            <section className='about' id="about">
                 <div className='about_title shine_title'>About Me</div>
                 <div className='about_paragraph_container' ref={activate_ref}>
                     {isIntersecting &&
@@ -86,7 +86,7 @@ function About() {
                             </AnimatePresence>
                         </>}
                 </div>
-            </div>
+            </section>
         </>);
 }
 

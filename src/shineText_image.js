@@ -3,7 +3,7 @@ import './shineText_photo.css'
 
 function NameAndPhoto() {
     return (
-        <div className='photo_name_container'>
+        <section className='photo_name_container'>
             <div className='image_logos'>
                 <img className='bf_photo' src='images/Morpheous_Matrix.png' alt='bf'></img>
                 <div className='logo_wrapper'>
@@ -36,7 +36,7 @@ function NameAndPhoto() {
                     />
                 </div>
             </div>
-        </div >
+        </section >
     );
 }
 

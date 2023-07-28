@@ -37,7 +37,7 @@ function ProjectSwiper() {
 
     return (
         <>
-            <div className="container" id='projects_slider'>
+            <section className="container" id='projects_slider'>
                 <AnimatePresence>
                     {project0_display && <Project content={projec0_info} set_display={setProject0_display} />}
                     {project1_display && <Project content={projec1_info} set_display={setProject1_display} />}
@@ -68,6 +68,7 @@ function ProjectSwiper() {
                         scale: 1,
                         slideShadows: false,
                     }}
+                    className='swiper_large_devices'
                 >
                     <SwiperSlide>
                         <div className={`project_cards server ${scaleX_trigger_slide0}`}>
@@ -115,7 +116,75 @@ function ProjectSwiper() {
                         </div>
                     </SwiperSlide>
                 </Swiper>
-            </div>
+
+                <Swiper
+                    modules={[EffectCoverflow, Navigation, Autoplay]}
+                    effect={'coverflow'}
+                    spaceBetween={200}
+                    slidesPerView={1}
+                    centeredSlides={true}
+                    loop={true}
+                    loopedSlides={1}
+                    navigation={true}
+                    autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
+                    onSlideChange={(index) => setAnimation(index.realIndex)}
+                    coverflowEffect={{
+                        rotate: 0,
+                        stretch: 30,
+                        depth: 80,
+                        modifier: 3,
+                        scale: 1,
+                        slideShadows: false,
+                    }}
+                    className='swiper_small_devices'
+                >
+                    <SwiperSlide>
+                        <div className={`project_cards server ${scaleX_trigger_slide0}`}>
+                            <div className="content">
+                                <h2 className='card_title'>HTTP Server</h2>
+                                <p className="card_description"> Some description ...</p>
+                                <button onClick={() => setProject0_display(true)}>Check Project</button>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={`project_cards stock_app ${scaleX_trigger_slide1}`}>
+                            <div className="content">
+                                <h2 className="card_title">Slug Stocks</h2>
+                                <p className="card_description"> Some description ...</p>
+                                <button onClick={() => setProject1_display(true)}>Check Project</button>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={`project_cards nasa_rover ${scaleX_trigger_slide2}`}>
+                            <div className="content">
+                                <h2 className="card_title">NASA Rover</h2>
+                                <p className="card_description"> Some description ...</p>
+                                <button onClick={() => setProject2_display(true)}>Check Project</button>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={`project_cards professor_class_matching ${scaleX_trigger_slide3}`}>
+                            <div className="content">
+                                <h2 className="card_title">Matching App</h2>
+                                <p className="card_description"> Some description ...</p>
+                                <button onClick={() => setProject3_display(true)}>Check Project</button>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={`project_cards shooting_range ${scaleX_trigger_slide4}`}>
+                            <div className="content">
+                                <h2 className="card_title">Shooting Target</h2>
+                                <p className="card_description"> Some description ...</p>
+                                <button onClick={() => setProject4_display(true)}>Check Project</button>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
+            </section>
         </>
     );
 }

@@ -8,8 +8,8 @@
   );
   /* position: absolute; */
   top: 0px;
-  height: 90vh;
-  height: calc(100vh - 90px);
+  height: 930px;
+  height: calc(930px - 90px);
   display: flex;
   justify-content: space-evenly;
 }
@@ -17,8 +17,9 @@
 .image_logos {
   /* background-color: aliceblue; */
   position: relative;
-  height: 70vh;
+  height: 650px;
   width: fit-content;
+  right: 20px;
   top: 45%;
   transform: translate(0%, -45%);
   display: flex;
@@ -29,7 +30,7 @@
 
 .bf_photo {
   /* background-color: aqua; */
-  width: 95%;
+  width: 550px;
   height: 80%;
 }
 
@@ -39,8 +40,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  width: 50%;
+  width: 600px;
   font-size: x-large;
   font-weight: 600;
   white-space: nowrap;
@@ -54,7 +54,6 @@
   position: relative;
   align-self: flex-start;
   bottom: 100px;
-  /* right: 80px; */
 }
 
 .name_paragraph .wrapper {
@@ -66,16 +65,12 @@
   position: relative;
   top: 100px;
   align-self: flex-end;
-  overflow: visible;
-  /* right: 100px; */
-  /* left: 20%; */
-  /* align-self: flex-end; */
 }
 
 .name {
   /* background-color: rgb(22, 240, 3); */
   -webkit-text-fill-color: rgb(255, 255, 255);
-  font-size: min(3vmin, 1000px);
+  font-size: 30px;
   position: relative;
   width: fit-content;
   text-align: center;
@@ -95,7 +90,6 @@
   width: 100%;
   height: 100%;
   left: 0%;
-  /* overflow: hidden; */
   transform: perspective(1.2em) rotateX(45deg) scale(1, 0.35);
   filter: blur(1em);
   animation: shine_bottom 3s ease-in-out infinite alternate;
@@ -198,5 +192,63 @@
 
   to {
     transform: scale(1.2, 1.2);
+  }
+}
+
+@media (width < 1000px) {
+  .photo_name_container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image_logos {
+    top: 43%;
+    height: 500px;
+  }
+
+  .bf_photo {
+    width: 450px;
+    position: relative;
+    left: 30px;
+  }
+
+  .logo_wrapper {
+    position: relative;
+    left: 30px;
+  }
+
+  .photo_name_container {
+    background: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 0%, 1),
+      hsla(0, 0%, 0%, 0.9),
+      hsla(0, 0%, 0%, 0)
+    );
+  }
+
+  .name_paragraph {
+    /* position: relative; */
+    top: 5%;
+    width: 450px;
+  }
+
+  .first_p,
+  .wrapper > * {
+    font-size: 15px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+}
+
+@media (width < 650px) {
+  .name_paragraph {
+    width: 350px;
+  }
+
+  .photo_name_container {
+    overflow: hidden;
   }
 }

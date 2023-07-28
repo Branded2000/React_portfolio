@@ -99,8 +99,8 @@ button:hover {
   padding: 0;
   position: absolute;
   z-index: 1;
-  left: 95%;
-  top: 50%;
+  left: 93%;
+  top: 45%;
   transform: translate(0%, -50%);
 }
 
@@ -161,5 +161,43 @@ button:hover {
   100% {
     -webkit-transform: scale(1.2, 1.2);
     opacity: 0;
+  }
+}
+
+@media (width < 825px) {
+  .nav ul {
+    width: min-content;
+  }
+
+  .showNav_button {
+    top: 50%;
+  }
+}
+
+@media (width < 655px) {
+  .resume_button {
+    position: relative;
+    right: 30px;
+  }
+
+  .showNav_button {
+    left: 88%;
+    top: 50%;
+  }
+
+  .nav_ul {
+    position: relative;
+    right: 30px;
+  }
+}
+
+@media (width < 400px) {
+  .showNav_button {
+    left: 87%;
+    top: 39%;
+  }
+
+  .nav_logo {
+    height: 40px;
   }
 }

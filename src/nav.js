@@ -10,7 +10,7 @@ function NavBar() {
     }
 
     return (
-        <>
+        <section>
             <div className='showNav_button'>
                 {showNav && <div onClick={onClick} title='Toggle Navigation Bar' className='circle'><FaAngleUp /></div>}
                 {!showNav && <div onClick={onClick} title='Toggle Navigation Bar' className='circle'><FaAngleDown /></div>}
@@ -30,18 +30,18 @@ function NavBar() {
                             <img className='capy_logo' src='images/Capy_logo.png' alt="logo" />
                         </div>
                     </a>
-                    <ul>
+                    <ul className='nav_ul'>
                         <li><a href="#main_page">Home</a></li>
                         <li><a href="#projects_slider">Projects</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                     <a className="CustomButton" href="#contact">
-                        <button>Resume</button>
+                        <button className='resume_button'>Resume</button>
                     </a>
                 </motion.nav>}
             </AnimatePresence>
-        </>
+        </section>
     );
 }
 
