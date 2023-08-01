@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
 @font-face {
   src: url(../public/fonts/retro_font.ttf);
   font-family: retro;
@@ -45,6 +47,10 @@ html {
 .Home body {
   display: flex;
   flex-flow: column;
+}
+
+.Home-body {
+  overflow: hidden;
 }
 
 @media (width < 1000px) {

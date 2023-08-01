@@ -16,22 +16,23 @@ const Project = (props) => {
                     <div className='exit_project' title='Close Project' onClick={() => props.set_display(false)}>
                         <FaRegWindowClose />
                     </div>
-                    <div className='main_image'>
-
+                    <div className='main_image img_'>
+                        <img alt='img1' src={props.content.main_image}></img>
                     </div>
                     <div className='info_image'>
-                        <div className='info'>
+                        <div className='info' id='scroll'>
                             <h1>{props.content.title}</h1>
-                            <p>{props.content.body}</p>
+                            {props.content.body}
                         </div>
                         <div className='images'>
-                            <div className='img1'></div>
-                            <div className='img2'></div>
-                            <div className='img3'></div>
-                            <div className='img4'></div>
+                            <div className='img_' ><img alt='img1' src={props.content.colums_images[0]}></img></div>
+                            <div className='img_' ><img alt='img1' src={props.content.colums_images[1]}></img></div>
+                            <div className='img_' ><img alt='img1' src={props.content.colums_images[2]}></img></div>
+                            <div className='img_' ><img alt='img1' src={props.content.colums_images[3]}></img></div>
                         </div>
                     </div>
                     <div className="tools_used">
+                        <div className='tools'>Tools used: {props.content.tools}</div>
                     </div>
                 </div>
             </motion.div>
