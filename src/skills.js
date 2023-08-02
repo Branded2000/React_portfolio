@@ -256,9 +256,12 @@ function Skills() {
                 </div>
                 <div className='expertice'>
                     <div className='skills_and_expertice shine_title'>Skills and Expertice</div>
-                    <div className='expertice_paragraph'>
+                    <div className='expertice_paragraph ' id='scroll'>
                         <h2 className='expertice_header'>Expertice</h2>
-                        <p className='paragraph'>something...</p>
+                        <p className='paragraph'> As a highly skilled Software Engineer, I possess a robust foundation in both low-level and high-level programming languages, showcasing a deep understanding of various technical domains. My proficiency in web application development is underscored by hands-on experience with frameworks like React, Django, Flask, and Vue.js. Additionally, I have a strong grasp of SQL and Database management, which enables me to excel as a full-stack developer. </p>
+                        <p className='paragraph'>  With hands-on experience in SCRUM, Agile, and DevOps methodologies, I am well-versed in fostering efficient collaboration. Additionally, I am a huge advocate of the creation of clean, readable, and maintainable code to ensure quality and scalability of the projects. </p>
+                        <p className='paragraph'> In addition to my technical prowess, I possess exceptional soft skills, including creativity, problem-solving, and the ability to thrive in a team-oriented environment. My drive to stay up-to-date with the latest advancements in the tech industry further reinforces my commitment to excellence as a Software Engineer. </p>
+                        <p className='paragraph'> I am eager to contribute my diverse skill set to a dynamic and innovative tech team, where I can play a vital role in designing cutting-edge solutions and driving success in the software engineering domain. </p>
                     </div>
                     <div className='tech_stack'>
                         <div className='stack_title'>Tech Stack</div>

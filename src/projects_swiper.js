@@ -31,9 +31,9 @@ function ProjectSwiper() {
     //Content of project slide
     const projec0_info = {
         title: "Multy-Threaded HTTP Server", body: <div className='p_container'>
-            <p>Designed an HTTP server with a modular structure, consisting of several modules. The main module, httpserver.c, serves as the core and connects all the other modules to generate the appropriate responses. It also handles logging of incoming requests.</p>
+            <div>Designed an HTTP server with an emphazis on modularity. The modules of my http server are the follwing: <ul><li>httpserver.h</li> <li>request.c, request.h</li> <li>get.c, get.h</li> <li>put.c, put.h</li> <li>append.c, append.h</li> <li>response.c, response.h</li> <li>linkedlist.c, linkedlist.h</li> <li>queue.c, queue.h</li> <li>hashtable.c, hashtable.h</li> <li>read_write_locks.c, read_write_locks.h</li></ul> The main module, httpserver.c, serves as the core and connects all the other modules to generate the appropriate responses. It also handles logging of incoming requests.</div>
 
-            <p>The request.c module, along with request.h, is responsible for creating a request structure with all the necessary arguments (Method, URI, Version, Header-Fields, Message-body). It parses the header fields into a linked list, which is deleted for each new request. It also points to the first letter of the message body for later use in PUT or APPEND requests.</p>
+            <p>The request.c module, along with request.h, is responsible for creating a request structure with all the necessary arguments (Method, URI, Version, Header-Fields, Message-body). It looks for the method to perform, validates uri, looks for correct http version, parses the header fields into a linked list, and stores the message-body for later use.</p>
 
             <p>For handling GET requests, the server uses the get.c module and get.h, which read the content from the specified file and display it to the user. If the request is valid, the response.c module is called to produce a success or failure response.</p>
 
@@ -41,13 +41,19 @@ function ProjectSwiper() {
 
             <p>The append.c and append.h modules handle APPEND requests, reading the content from the message body and appending it to the specified file. Once again, the response.c module handles the response generation.</p>
 
-            <p>The linkedlist.c and linkedlist.h modules implement a linked list data structure, used to store the Header-Fields of a request. This choice was made because the number of Header-Fields in a request is unknown, and a linked list allows dynamic addition of elements.</p>
+            <p>The linkedlist.c and linkedlist.h modules implement a linked list data structure, used to store the Header-Fields of a request. This choice was made because the number of Header-Fields in a request is unknown, and a linked list allows dynamic addition of elements. I choosed this data structure because it is O(1) which is constant time opeartions, thus not affecting much the efficiecy of our server</p>
 
             <p>The server returns specific error responses for different situations, using the response.c module. The error responses are shared between GET, PUT, and APPEND modules, simplifying the error handling process.</p>
+
+            <p>The hash__table.c and hash_table.h module is a hash table that stores uri's and assigns each uri their own lock. By allowing each uri to have their own lock, we can lock the and unlock whenever we want to read or write to the same uri</p>
+
+            <p>The queue.c and queue.h  use an array as a queue that works as a bounded buffer. This data structure is shared by all threads created by our server. I use this data structure as a work queue, our distpatcher thread enques connections while our worker threads dequeue the connections</p>
 
             <p>The modular approach ensures that each method operates independently, allowing for easy addition or removal of methods without affecting other functionalities. It also aids in debugging specific modules, as they are isolated from others.</p>
 
             <p>Overall, the server is designed for flexibility, easy maintenance, and efficient error handling, making it scalable and adaptable to future expansions.</p>
+
+            <p>If you would like to view the code, please send me an email. I cannot display the code here or make my github repositoty public, as it could potentially be leaked and undermine the learning experience for future UCSC students.</p>
         </div>, tools: ["Linux, ", "C, ", "Valgrind, ", "NetCat, ", "Git "], main_image: "images/http_server_images/server_diagram.PNG", colums_images: ["images/http_server_images/server.PNG", "images/http_server_images/Append_foo.PNG", "images/http_server_images/Get_foo.PNG", "images/http_server_images/Put_foo.PNG"], back_color: "black"
     };
     const projec1_info = { title: "Investing App Slug Stocks", body: "something", tools: "", main_image: "", colums_images: [], back_color: "white" };
@@ -88,13 +94,12 @@ function ProjectSwiper() {
                         scale: 1,
                         slideShadows: false,
                     }}
-                    className='swiper_large_devices'
-                >
+                    className='swiper_large_devices'>
                     <SwiperSlide>
                         <div className={`project_cards server ${scaleX_trigger_slide0}`}>
                             <div className="content">
                                 <h2 className='card_title'>HTTP Server</h2>
-                                <p className="card_description"> Some description ...</p>
+                                <p className="card_description"> Designed and structured a multithreaded http server with an emphazis on modularity to ensure scalability. The server was built in the c language, and it employs the HTTP 1.1 protocol. The server handles file operations such as READ, WRITE, and APPEND.</p>
                                 <button onClick={() => setProject0_display(true)}>Check Project</button>
                             </div>
                         </div>

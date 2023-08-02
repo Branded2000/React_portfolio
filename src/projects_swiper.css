@@ -13,6 +13,7 @@
 .swiper {
   /* background-color: aqua; */
   width: 100%;
+  max-width: 1325px;
   height: 500px;
   margin: 0 auto;
   overflow: hidden;
@@ -166,6 +167,12 @@
 .card_description {
   position: relative;
   color: white;
+  width: 80%;
+  top: 30%;
+  left: 50%;
+  font-family: "VT323", monospace;
+  font-size: large;
+  transform: translate(-50%, -50%);
 }
 
 .projects_title {
@@ -200,7 +207,7 @@
   }
 }
 
-@media (width < 1000px) {
+@media (width < 1100px) {
   .container {
     background: linear-gradient(
       to top,
@@ -238,7 +245,7 @@
   }
 } */
 
-@media (width >= 1000px) {
+@media (width >= 1100px) {
   .swiper_small_devices {
     display: none !important;
   }

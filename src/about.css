@@ -107,11 +107,17 @@
 
 .about_paragraph {
   position: relative;
-  top: 30%;
+  top: 40%;
   left: 50%;
-  width: fit-content;
+  width: 90%;
   transform: translate(-50%, -50%);
   opacity: 1;
+}
+
+.about_paragraph > * {
+  color: white;
+  font-family: "VT323", monospace;
+  font-size: x-large;
 }
 
 @media (width < 1000px) {
