@@ -54,12 +54,22 @@ function ProjectSwiper() {
             <p>Overall, the server is designed for flexibility, easy maintenance, and efficient error handling, making it scalable and adaptable to future expansions.</p>
 
             <p>If you would like to view the code, please send me an email. I cannot display the code here or make my github repositoty public, as it could potentially be leaked and undermine the learning experience for future UCSC students.</p>
-        </div>, tools: ["Linux, ", "C, ", "Valgrind, ", "NetCat, ", "Git "], main_image: "images/http_server_images/server_diagram.PNG", colums_images: ["images/http_server_images/server.PNG", "images/http_server_images/Append_foo.PNG", "images/http_server_images/Get_foo.PNG", "images/http_server_images/Put_foo.PNG"], back_color: "black"
+        </div>, tools: ["Linux, ", "C, ", "Valgrind, ", "NetCat, ", "Git "], main_image: "images/http_server_images/server_diagram.PNG", colums_images: ["images/http_server_images/server.PNG", "images/http_server_images/Append_foo.PNG", "images/http_server_images/Get_foo.PNG", "images/http_server_images/Put_foo.PNG"], back_color: "hsla(0, 0%, 0%, 0.8)"
     };
-    const projec1_info = { title: "Investing App Slug Stocks", body: "something", tools: "", main_image: "", colums_images: [], back_color: "white" };
-    const projec2_info = { title: "Nasa Rover (Benatar)", body: "something", tools: "", main_image: "", colums_images: [], back_color: "black" };
-    const projec3_info = { title: "Class-Professor Matching App", body: "something", tools: "", main_image: "", colums_images: [], back_color: "blue" };
-    const projec4_info = { title: "Automated Practice Shooting Targets", body: "something", tools: "", main_image: "", colums_images: [], back_color: "purple" };
+    const projec1_info = {
+        title: "Investing App - Slug Stocks", body: <div className='p_container'>
+            <p>Slug Stocks is a stock trading app designed to provide users with real-time stock data and the latest stock news to make informed decisions. The app includes features such as profile creation, a favorite stocks watchlist, friend connections, and interactive stock data displayed as charts. As a team of five, we effectively applied the SCRUM methodology alongside various software engineering practices to develop this app. Slug Stocks was successfully developed within a two-month timeframe, divided into four two-week length sprints.</p>
+
+            <p>Slug Stocks utilizes the TD Ameritrade API for stock trading and the News API to retrieve the most recent stock news. Moreover, to visualize user data, including investments over time, we integrated the Chart.js API.</p>
+
+            <p> With this project, I gained hands-on experience in full-stack web development, working with the SCRUM methodology within a team, and utilizing APIs.</p>
+
+            <button onClick={() => { window.open('https://github.com/Branded2000/slug_stocks', '_blank'); }}>GitHub</button>
+        </div>, tools: ["Python, ", "Flask, ", "HTML, ", "CSS, ", "JavaScript"], main_image: "images/Slug_stocks_images/investments_performance.PNG", colums_images: ["images/Slug_stocks_images/profile_page.PNG", "images/Slug_stocks_images/stock_search_page.PNG", "images/Slug_stocks_images/most_recent_stock_news.PNG", "images/Slug_stocks_images/favotires.PNG"], back_color: "hsla(126, 91%, 9%, 0.8)"
+    };
+    const projec2_info = { title: "Nasa Rover (Benatar)", body: "something", tools: "", main_image: "", colums_images: [], back_color: "hsla(36, 89%, 11%, 0.8)" };
+    const projec3_info = { title: "Class-Professor Matching App", body: "something", tools: "", main_image: "", colums_images: [], back_color: "hsla(250, 93%, 11%, 0.8)" };
+    const projec4_info = { title: "Automated Practice Shooting Targets", body: "Coming Soon!", tools: "", main_image: "", colums_images: [], back_color: "hsla(0, 92%, 10%, 0.8)" };
 
     return (
         <>
@@ -108,7 +118,7 @@ function ProjectSwiper() {
                         <div className={`project_cards stock_app ${scaleX_trigger_slide1}`}>
                             <div className="content">
                                 <h2 className="card_title">Slug Stocks</h2>
-                                <p className="card_description"> Some description ...</p>
+                                <p className="card_description"> Slug Stocks is a trading application developed in a fast pased environment by a team of 5. By leveraging the SCRUM methodology and adopting various software engineering practices, Slug Stocks successfully completed its Minimum Viable Product (MVP) within a series of sprints.</p>
                                 <button onClick={() => setProject1_display(true)}>Check Project</button>
                             </div>
                         </div>
@@ -135,7 +145,7 @@ function ProjectSwiper() {
                         <div className={`project_cards shooting_range ${scaleX_trigger_slide4}`}>
                             <div className="content">
                                 <h2 className="card_title">Shooting Target</h2>
-                                <p className="card_description"> Some description ...</p>
+                                <p className="card_description"> Comming Soon!</p>
                                 <button onClick={() => setProject4_display(true)}>Check Project</button>
                             </div>
                         </div>

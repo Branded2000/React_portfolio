@@ -36,9 +36,8 @@ function NavBar() {
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
-                    <a className="CustomButton" href="#contact">
-                        <button className='resume_button'>Resume</button>
-                    </a>
+                    <button className='resume_button' onClick={() => { window.open('/Resume-2023.pdf', '_blank'); }}>Resume</button>
+
                 </motion.nav>}
             </AnimatePresence>
         </section>

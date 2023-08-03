@@ -6,13 +6,13 @@ import { FaRegWindowClose } from 'react-icons/fa';
 const Project = (props) => {
     return (
         <>
-            <motion.div className="project_container" style={{ backgroundColor: props.content.back_color }}
+            <motion.div className="project_container"
                 key='project'
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 exit={{ scale: 0, opacity: 0 }}>
-                <div className='project_background'>
+                <div className='project_background' style={{ backgroundColor: props.content.back_color }}>
                     <div className='exit_project' title='Close Project' onClick={() => props.set_display(false)}>
                         <FaRegWindowClose />
                     </div>
