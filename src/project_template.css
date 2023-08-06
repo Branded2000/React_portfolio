@@ -75,14 +75,16 @@
   cursor: pointer;
 }
 
-.exit_project > * {
+.exit_project > *,
+.exit_img > * {
   width: 100%;
   height: 100%;
   position: relative;
   fill: rgb(255, 255, 255);
 }
 
-.exit_project:hover {
+.exit_project:hover,
+.exit_img:hover {
   transform: scale(1.2);
 }
 
@@ -138,6 +140,10 @@
   font-size: 11px;
 }
 
+.img_ {
+  cursor: zoom-in;
+}
+
 .images img,
 .main_image img {
   width: 100%;
@@ -150,6 +156,32 @@
   font-size: large;
   left: 40%;
   transform: translateX(-50%);
+}
+
+.zoom_image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  z-index: 3;
+}
+
+.zoom_image img {
+  width: 90%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.exit_img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
 }
 
 @media (width < 1000px) {

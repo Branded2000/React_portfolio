@@ -65,10 +65,27 @@ function ProjectSwiper() {
             <p> With this project, I gained hands-on experience in full-stack web development, working with the SCRUM methodology within a team, and utilizing APIs.</p>
 
             <button onClick={() => { window.open('https://github.com/Branded2000/slug_stocks', '_blank'); }}>GitHub</button>
-        </div>, tools: ["Python, ", "Flask, ", "HTML, ", "CSS, ", "JavaScript"], main_image: "images/Slug_stocks_images/investments_performance.PNG", colums_images: ["images/Slug_stocks_images/profile_page.PNG", "images/Slug_stocks_images/stock_search_page.PNG", "images/Slug_stocks_images/most_recent_stock_news.PNG", "images/Slug_stocks_images/favotires.PNG"], back_color: "hsla(126, 91%, 9%, 0.8)"
+        </div>, tools: ["Python, ", "Flask, ", "SQL, ", "HTML, ", "CSS, ", "JavaScript"], main_image: "images/Slug_stocks_images/investments_performance.PNG", colums_images: ["images/Slug_stocks_images/profile_page.PNG", "images/Slug_stocks_images/stock_search_page.PNG", "images/Slug_stocks_images/most_recent_stock_news.PNG", "images/Slug_stocks_images/favotires.PNG"], back_color: "hsla(126, 91%, 9%, 0.8)"
     };
-    const projec2_info = { title: "Nasa Rover (Benatar)", body: "something", tools: "", main_image: "", colums_images: [], back_color: "hsla(36, 89%, 11%, 0.8)" };
-    const projec3_info = { title: "Class-Professor Matching App", body: "something", tools: "", main_image: "", colums_images: [], back_color: "hsla(250, 93%, 11%, 0.8)" };
+    const projec2_info = {
+        title: "Nasa Rover (Benatar)", body: <div className='p_container'>
+            <p> Something</p>
+
+            <button onClick={() => { window.open('', '_blank'); }}>GitHub</button>
+
+        </div>, tools: ["C, ", "arduinoUno, ", "arduino IDE, "], main_image: "", colums_images: [], back_color: "hsla(36, 89%, 11%, 0.8)"
+    };
+    const projec3_info = {
+        title: "Class-Professor Matching App", body: <div className='p_container'>
+            <p> Class-Professor Matching was developed by a team of five full-stack developers over a span of six weeks. This interactive, user-friendly, and intuitive application caters to users of all backgrounds. Our emphasis on user experience (UX) ensures that the user interface (UI) is both user-friendly and intuitive.</p>
+
+            <p> With Class-Professor Matching, users can easily create schedules that match classes to professors for a given school year. The app allows for effortless editing of the matches already created and incorporates different views for a comprehensive data analysis.</p>
+
+            <p> Throughout this project, I had the opportunity to leverage my SQL skills by implementing and managing the app's database. Moreover, I reinforced my full-stack web development expertise and honed my ability to collaborate effectively within a team to build a robust web application.</p>
+
+            <button onClick={() => { window.open('https://github.com/danielchandg/ProfessorClassMatching', '_blank'); }}>GitHub</button>
+        </div>, tools: ["py4web, ", "vue.js, ", "bulma, ", "python, ", "javascript, ", "html, ", "css"], main_image: "images/prof_class_matching/view1.PNG", colums_images: ["images/prof_class_matching/data_base_setup.PNG", "images/prof_class_matching/matchings.PNG", "images/prof_class_matching/view2.PNG", "images/prof_class_matching/view3_2.0.PNG"], back_color: "hsla(264, 80%, 15%, 0.8)"
+    };
     const projec4_info = { title: "Automated Practice Shooting Targets", body: "Coming Soon!", tools: "", main_image: "", colums_images: [], back_color: "hsla(0, 92%, 10%, 0.8)" };
 
     return (
@@ -127,7 +144,7 @@ function ProjectSwiper() {
                         <div className={`project_cards nasa_rover ${scaleX_trigger_slide2}`}>
                             <div className="content">
                                 <h2 className="card_title">NASA Rover</h2>
-                                <p className="card_description"> Some description ...</p>
+                                <p className="card_description"> Designed and built a rover intended for exploration in rough terrains. Developed specific software to control the various parts of the rover, including sensors, movement, and a robotic hand used for item collection.</p>
                                 <button onClick={() => setProject2_display(true)}>Check Project</button>
                             </div>
                         </div>
@@ -136,7 +153,7 @@ function ProjectSwiper() {
                         <div className={`project_cards professor_class_matching ${scaleX_trigger_slide3}`}>
                             <div className="content">
                                 <h2 className="card_title">Matching App</h2>
-                                <p className="card_description"> Some description ...</p>
+                                <p className="card_description"> This application is designed to assist school departments in creating schedules of classes for professors and students, providing a user-friendly interface for easy viewing. Current methods can be complex and time-consuming, but with this application, the process becomes simplified and efficient.</p>
                                 <button onClick={() => setProject3_display(true)}>Check Project</button>
                             </div>
                         </div>
@@ -177,7 +194,7 @@ function ProjectSwiper() {
                         <div className={`project_cards server ${scaleX_trigger_slide0}`}>
                             <div className="content">
                                 <h2 className='card_title'>HTTP Server</h2>
-                                <p className="card_description"> Some description ...</p>
+                                <p className="card_description"> Designed and structured a multithreaded http server with an emphazis on modularity to ensure scalability. The server was built in the c language, and it employs the HTTP 1.1 protocol. The server handles file operations such as READ, WRITE, and APPEND.</p>
                                 <button onClick={() => setProject0_display(true)}>Check Project</button>
                             </div>
                         </div>
@@ -186,7 +203,7 @@ function ProjectSwiper() {
                         <div className={`project_cards stock_app ${scaleX_trigger_slide1}`}>
                             <div className="content">
                                 <h2 className="card_title">Slug Stocks</h2>
-                                <p className="card_description"> Some description ...</p>
+                                <p className="card_description">Slug Stocks is a trading application developed in a fast pased environment by a team of 5. By leveraging the SCRUM methodology and adopting various software engineering practices, Slug Stocks successfully completed its Minimum Viable Product (MVP) within a series of sprints.</p>
                                 <button onClick={() => setProject1_display(true)}>Check Project</button>
                             </div>
                         </div>
@@ -195,7 +212,7 @@ function ProjectSwiper() {
                         <div className={`project_cards nasa_rover ${scaleX_trigger_slide2}`}>
                             <div className="content">
                                 <h2 className="card_title">NASA Rover</h2>
-                                <p className="card_description"> Some description ...</p>
+                                <p className="card_description"> Designed and built a rover intended for exploration in rough terrains. Developed specific software to control the various parts of the rover, including sensors, movement, and a robotic hand used for item collection.</p>
                                 <button onClick={() => setProject2_display(true)}>Check Project</button>
                             </div>
                         </div>
@@ -204,7 +221,7 @@ function ProjectSwiper() {
                         <div className={`project_cards professor_class_matching ${scaleX_trigger_slide3}`}>
                             <div className="content">
                                 <h2 className="card_title">Matching App</h2>
-                                <p className="card_description"> Some description ...</p>
+                                <p className="card_description"> This application is designed to assist school departments in creating schedules of classes for professors and students, providing a user-friendly interface for easy viewing. Current methods can be complex and time-consuming, but with this application, the process becomes simplified and efficient.</p>
                                 <button onClick={() => setProject3_display(true)}>Check Project</button>
                             </div>
                         </div>
@@ -213,7 +230,7 @@ function ProjectSwiper() {
                         <div className={`project_cards shooting_range ${scaleX_trigger_slide4}`}>
                             <div className="content">
                                 <h2 className="card_title">Shooting Target</h2>
-                                <p className="card_description"> Some description ...</p>
+                                <p className="card_description"> COMING SOON!</p>
                                 <button onClick={() => setProject4_display(true)}>Check Project</button>
                             </div>
                         </div>
