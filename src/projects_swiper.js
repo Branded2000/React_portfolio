@@ -31,7 +31,15 @@ function ProjectSwiper() {
     //Content of project slide
     const projec0_info = {
         title: "Multy-Threaded HTTP Server", body: <div className='p_container'>
-            <div>Designed an HTTP server with an emphazis on modularity. The modules of my http server are the follwing: <ul><li>httpserver.h</li> <li>request.c, request.h</li> <li>get.c, get.h</li> <li>put.c, put.h</li> <li>append.c, append.h</li> <li>response.c, response.h</li> <li>linkedlist.c, linkedlist.h</li> <li>queue.c, queue.h</li> <li>hashtable.c, hashtable.h</li> <li>read_write_locks.c, read_write_locks.h</li></ul> The main module, httpserver.c, serves as the core and connects all the other modules to generate the appropriate responses. It also handles logging of incoming requests.</div>
+            <p>Designed an HTTP file handling server with an emphazis on modularity. The server utilizes the HTTP 1.1 protocol, and requests can be made with CURL or NetCat. </p>
+
+            <p>The server is initialized in this form: <strong>./httpserver [-t threads] [-l logfile] [port]</strong></p>
+
+            <p>A request to the server is in this form: <strong>[Method] [URI] [Version]\r\n[Header-Field]\r\n[Message-Body]</strong> <em>Note: Header-Fields have to be in the [key: val, ...] pairs</em></p>
+
+            <p>The responses are logged in a file created by the server and are in the form of: <strong>[Oper],[URI],[Status-Code],[RequestID header value]\n</strong></p>
+
+            <p>The modules of my http server are the follwing: <ul><li>httpserver.h</li> <li>request.c, request.h</li> <li>get.c, get.h</li> <li>put.c, put.h</li> <li>append.c, append.h</li> <li>response.c, response.h</li> <li>linkedlist.c, linkedlist.h</li> <li>queue.c, queue.h</li> <li>hashtable.c, hashtable.h</li> <li>read_write_locks.c, read_write_locks.h</li></ul> The main module, httpserver.c, serves as the core and connects all the other modules to generate the appropriate responses. It also handles logging of incoming requests.</p>
 
             <p>The request.c module, along with request.h, is responsible for creating a request structure with all the necessary arguments (Method, URI, Version, Header-Fields, Message-body). It looks for the method to perform, validates uri, looks for correct http version, parses the header fields into a linked list, and stores the message-body for later use.</p>
 
@@ -53,8 +61,8 @@ function ProjectSwiper() {
 
             <p>Overall, the server is designed for flexibility, easy maintenance, and efficient error handling, making it scalable and adaptable to future expansions.</p>
 
-            <p>If you would like to view the code, please send me an email. I cannot display the code here or make my github repositoty public, as it could potentially be leaked and undermine the learning experience for future UCSC students.</p>
-        </div>, tools: ["Linux, ", "C, ", "Valgrind, ", "NetCat, ", "Git "], main_image: "images/http_server_images/server_diagram.PNG", colums_images: ["images/http_server_images/server.PNG", "images/http_server_images/Append_foo.PNG", "images/http_server_images/Get_foo.PNG", "images/http_server_images/Put_foo.PNG"], back_color: "hsla(0, 0%, 0%, 0.8)"
+            <p>If you would like to view the code, please send me an email. I cannot display the code here or make my github repositoty public, as it could potentially be leaked and undermine the learning experience for future UCSC students.</p> </div>
+        , tools: ["Linux, ", "C, ", "Valgrind, ", "NetCat, ", "Git "], main_image: "images/http_server_images/server_diagram.PNG", colums_images: ["images/http_server_images/server.PNG", "images/http_server_images/Append_foo.PNG", "images/http_server_images/Get_foo.PNG", "images/http_server_images/Put_foo.PNG"], back_color: "hsla(0, 0%, 0%, 0.8)"
     };
     const projec1_info = {
         title: "Investing App - Slug Stocks", body: <div className='p_container'>
@@ -69,11 +77,19 @@ function ProjectSwiper() {
     };
     const projec2_info = {
         title: "Nasa Rover (Benatar)", body: <div className='p_container'>
-            <p> Something</p>
+            <p> Created, built, and developed a prototype of a NASA rover, named Benatar, designed for exploration in rough terrains, item collection, and construction/assembly of structures. Benatar features four wheel motors, four omnidirectional wheels, four shock absorbers, and a robotic hand equipped with six servo motors. To control all the motors effectively we utilized the microcontroller board Arduino UNO. The software was developed using Arduino IDE wich is based in c++ . Additionally, we installed a Bluetooth module to enable remote control of the rover's actions.</p>
 
-            <button onClick={() => { window.open('', '_blank'); }}>GitHub</button>
+            <p> To send commands and manipulate the rover, we developed custom software. We also designed an app specifically for controlling the robotic hand with various different actions.</p>
 
-        </div>, tools: ["C, ", "arduinoUno, ", "arduino IDE, "], main_image: "", colums_images: [], back_color: "hsla(36, 89%, 11%, 0.8)"
+            <p> Throughout this project, I gained valuable experience in developing software for embedded systems and effectively controlling and manipulating the various components of this custom-built rover.</p>
+
+            <div><button style={{ fontFamily: "VT323, monospace" }} onClick={() => { window.open('images/nasa_rover/Benatar final Poster.pdf', '_blank'); }}>See Rover Poster</button></div>
+
+            <p><button style={{ fontFamily: "VT323, monospace" }} onClick={() => { window.open('images/nasa_rover/benatar_video.mp4', '_blank'); }}>Watch Rover Demo</button></p>
+
+            <div><button style={{ fontFamily: "VT323, monospace" }} onClick={() => { window.open('https://github.com/Branded2000/Nasa-Rover', '_blank'); }}>GitHub</button></div>
+
+        </div>, tools: ["C++, ", "arduinoUno, ", "arduino IDE, "], main_image: "images/nasa_rover/benatar.PNG", colums_images: ["images/nasa_rover/benatar_2.PNG", "images/nasa_rover/car_sketch.PNG", "images/nasa_rover/hand_sketch.PNG", "images/nasa_rover/hand_prints.PNG"], back_color: "hsla(36, 89%, 11%, 0.8)"
     };
     const projec3_info = {
         title: "Class-Professor Matching App", body: <div className='p_container'>

@@ -127,8 +127,9 @@
   font-size: 20px;
 }
 
-.p_container ul li {
-  color: #ffffff;
+.p_container ul li,
+.p_container strong,
+.p_container em {
   font-family: "VT323", monospace;
   font-size: 20px;
 }
