@@ -153,7 +153,8 @@ function Skills() {
                 {/* <div className='separator'></div> */}
 
                 <div className='all_skill_icons'>
-                    <button className='see_all_icon_names_states' onClick={see_all_icons}> See All</button>
+                    {!see_all && <button className='see_all_icon_names_states' onClick={see_all_icons}> See All</button>}
+                    {see_all && <button className='see_all_icon_names_states' onClick={see_all_icons}> Hide</button>}
                     <div className='icon_column'>
                         <div className={`icon_container c c_1 ${show_all_titles}`} onMouseEnter={() => onMouseEnter(0)} onMouseLeave={() => onMouseLeave(0)}>
                             {c_icon && <PointerLine />}

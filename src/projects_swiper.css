@@ -88,7 +88,8 @@
   .stock_app:focus-within .content,
   .nasa_rover:focus-within .content,
   .professor_class_matching:focus-within .content,
-  .shooting_range:focus-within .content {
+  .shooting_range:focus-within .content,
+  .manual_trigger .content {
     transform: translateY(0);
     transition-delay: 500ms;
   }
@@ -102,7 +103,9 @@
   .stock_app:focus-within .content > *,
   .nasa_rover:focus-within .content > *,
   .professor_class_matching:focus-within .content > *,
-  .shooting_range:focus-within .content > * {
+  .shooting_range:focus-within .content > *,
+  .manual_trigger .content .card_description,
+  .manual_trigger .content button {
     opacity: 1;
     transition-delay: 1000ms;
   }
@@ -142,6 +145,7 @@
   position: relative;
   width: max-content;
   padding: 0 0 0 1.5rem;
+  font-size: medium;
 }
 
 .container button {
@@ -178,7 +182,7 @@
 .projects_title {
   position: relative;
   width: fit-content;
-  font-size: 40px;
+  font-size: 35px;
   left: 70%;
   top: 13%;
 }
@@ -207,7 +211,7 @@
   }
 }
 
-@media (width < 1100px) {
+@media (width < 1000px) {
   .container {
     background: linear-gradient(
       to top,
@@ -245,7 +249,7 @@
   }
 } */
 
-@media (width >= 1100px) {
+@media (width >= 1000px) {
   .swiper_small_devices {
     display: none !important;
   }

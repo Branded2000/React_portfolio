@@ -60,7 +60,8 @@ function About() {
         <>
             <section className='about' id="about">
                 <div className='about_title shine_title'>About Me</div>
-                <div className='about_paragraph_container' ref={activate_ref}>
+                <div className='about_paragraph_container'>
+                    <div className='about_ref_place_holder_div' ref={activate_ref}> </div>
                     {isIntersecting &&
                         <>
                             <AnimatePresence>

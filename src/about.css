@@ -120,6 +120,14 @@
   font-size: x-large;
 }
 
+.about_ref_place_holder_div {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 50%;
+  top: 50%;
+}
+
 @media (width < 1000px) {
   .about_title {
     left: 50%;

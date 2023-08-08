@@ -33,13 +33,13 @@ function ProjectSwiper() {
         title: "Multy-Threaded HTTP Server", body: <div className='p_container'>
             <p>Designed an HTTP file handling server with an emphazis on modularity. The server utilizes the HTTP 1.1 protocol, and requests can be made with CURL or NetCat. </p>
 
-            <p>The server is initialized in this form: <strong>./httpserver [-t threads] [-l logfile] [port]</strong></p>
-
-            <p>A request to the server is in this form: <strong>[Method] [URI] [Version]\r\n[Header-Field]\r\n[Message-Body]</strong> <em>Note: Header-Fields have to be in the [key: val, ...] pairs</em></p>
-
-            <p>The responses are logged in a file created by the server and are in the form of: <strong>[Oper],[URI],[Status-Code],[RequestID header value]\n</strong></p>
-
-            <p>The modules of my http server are the follwing: <ul><li>httpserver.h</li> <li>request.c, request.h</li> <li>get.c, get.h</li> <li>put.c, put.h</li> <li>append.c, append.h</li> <li>response.c, response.h</li> <li>linkedlist.c, linkedlist.h</li> <li>queue.c, queue.h</li> <li>hashtable.c, hashtable.h</li> <li>read_write_locks.c, read_write_locks.h</li></ul> The main module, httpserver.c, serves as the core and connects all the other modules to generate the appropriate responses. It also handles logging of incoming requests.</p>
+            <div>The server is initialized in this form: <div className='command'>./httpserver [-t threads] [-l logfile] [port]</div></div>
+            <br></br>
+            <div>A request to the server is in this form: <div className='command'>[Method] [URI] [Version]\r\n[Header-Field]\r\n[Message-Body]</div> <em>Note: Header-Fields have to be in the [key: val, ...] pairs</em></div>
+            <br></br>
+            <div>The responses are logged in a file created by the server and are in the form of: <div className='command'>[Oper],[URI],[Status-Code],[RequestID header value]\n</div></div>
+            <br></br>
+            <div>The modules of my http server are the follwing: <ul><li>httpserver.h</li> <li>request.c, request.h</li> <li>get.c, get.h</li> <li>put.c, put.h</li> <li>append.c, append.h</li> <li>response.c, response.h</li> <li>linkedlist.c, linkedlist.h</li> <li>queue.c, queue.h</li> <li>hashtable.c, hashtable.h</li> <li>read_write_locks.c, read_write_locks.h</li></ul> The main module, httpserver.c, serves as the core and connects all the other modules to generate the appropriate responses. It also handles logging of incoming requests.</div>
 
             <p>The request.c module, along with request.h, is responsible for creating a request structure with all the necessary arguments (Method, URI, Version, Header-Fields, Message-body). It looks for the method to perform, validates uri, looks for correct http version, parses the header fields into a linked list, and stores the message-body for later use.</p>
 
@@ -79,9 +79,11 @@ function ProjectSwiper() {
         title: "Nasa Rover (Benatar)", body: <div className='p_container'>
             <p> Created, built, and developed a prototype of a NASA rover, named Benatar, designed for exploration in rough terrains, item collection, and construction/assembly of structures. Benatar features four wheel motors, four omnidirectional wheels, four shock absorbers, and a robotic hand equipped with six servo motors. To control all the motors effectively we utilized the microcontroller board Arduino UNO. The software was developed using Arduino IDE wich is based in c++ . Additionally, we installed a Bluetooth module to enable remote control of the rover's actions.</p>
 
-            <p> To send commands and manipulate the rover, we developed custom software. We also designed an app specifically for controlling the robotic hand with various different actions.</p>
+            <p> To send commands and manipulate the rover, we developed custom software. We also designed an app specifically for controlling the robotic hand's various different actions.</p>
 
-            <p> Throughout this project, I gained valuable experience in developing software for embedded systems and effectively controlling and manipulating the various components of this custom-built rover.</p>
+            <p> Throughout this Internship, I gained valuable experience in developing software for embedded systems and effectively controlling and manipulating the various components of this custom-built rover.</p>
+
+            <p><button style={{ fontFamily: "VT323, monospace" }} onClick={() => { window.open('images/nasa_rover/certification.PNG', '_blank'); }}>Certification</button></p>
 
             <div><button style={{ fontFamily: "VT323, monospace" }} onClick={() => { window.open('images/nasa_rover/Benatar final Poster.pdf', '_blank'); }}>See Rover Poster</button></div>
 
@@ -115,7 +117,9 @@ function ProjectSwiper() {
                     {project4_display && <Project content={projec4_info} set_display={setProject4_display} />}
                 </AnimatePresence>
                 <div className='projects_title shine_title'>
-                    Projects
+                    <div>Projects</div>
+                    <div>and</div>
+                    <div>Experience</div>
                 </div>
 
                 <Swiper
@@ -127,7 +131,7 @@ function ProjectSwiper() {
                     loop={true}
                     loopedSlides={2}
                     navigation={true}
-                    autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
+                    // autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
                     onSlideChange={(index) => setAnimation(index.realIndex)}
                     coverflowEffect={{
                         rotate: 0,
@@ -141,7 +145,7 @@ function ProjectSwiper() {
                     <SwiperSlide>
                         <div className={`project_cards server ${scaleX_trigger_slide0}`}>
                             <div className="content">
-                                <h2 className='card_title'>HTTP Server</h2>
+                                <div className='card_title'>HTTP Server</div>
                                 <p className="card_description"> Designed and structured a multithreaded http server with an emphazis on modularity to ensure scalability. The server was built in the c language, and it employs the HTTP 1.1 protocol. The server handles file operations such as READ, WRITE, and APPEND.</p>
                                 <button onClick={() => setProject0_display(true)}>Check Project</button>
                             </div>
@@ -150,7 +154,7 @@ function ProjectSwiper() {
                     <SwiperSlide>
                         <div className={`project_cards stock_app ${scaleX_trigger_slide1}`}>
                             <div className="content">
-                                <h2 className="card_title">Slug Stocks</h2>
+                                <div className="card_title">Slug Stocks</div>
                                 <p className="card_description"> Slug Stocks is a trading application developed in a fast pased environment by a team of 5. By leveraging the SCRUM methodology and adopting various software engineering practices, Slug Stocks successfully completed its Minimum Viable Product (MVP) within a series of sprints.</p>
                                 <button onClick={() => setProject1_display(true)}>Check Project</button>
                             </div>
@@ -159,7 +163,7 @@ function ProjectSwiper() {
                     <SwiperSlide>
                         <div className={`project_cards nasa_rover ${scaleX_trigger_slide2}`}>
                             <div className="content">
-                                <h2 className="card_title">NASA Rover</h2>
+                                <div className="card_title">NASA Rover <div>(Internship)</div></div>
                                 <p className="card_description"> Designed and built a rover intended for exploration in rough terrains. Developed specific software to control the various parts of the rover, including sensors, movement, and a robotic hand used for item collection.</p>
                                 <button onClick={() => setProject2_display(true)}>Check Project</button>
                             </div>
@@ -168,7 +172,7 @@ function ProjectSwiper() {
                     <SwiperSlide>
                         <div className={`project_cards professor_class_matching ${scaleX_trigger_slide3}`}>
                             <div className="content">
-                                <h2 className="card_title">Matching App</h2>
+                                <div className="card_title">Matching App</div>
                                 <p className="card_description"> This application is designed to assist school departments in creating schedules of classes for professors and students, providing a user-friendly interface for easy viewing. Current methods can be complex and time-consuming, but with this application, the process becomes simplified and efficient.</p>
                                 <button onClick={() => setProject3_display(true)}>Check Project</button>
                             </div>
@@ -177,9 +181,9 @@ function ProjectSwiper() {
                     <SwiperSlide>
                         <div className={`project_cards shooting_range ${scaleX_trigger_slide4}`}>
                             <div className="content">
-                                <h2 className="card_title">Shooting Target</h2>
+                                <div className="card_title">Shooting <div>Target</div></div>
                                 <p className="card_description"> Comming Soon!</p>
-                                <button onClick={() => setProject4_display(true)}>Check Project</button>
+                                {/* <button onClick={() => setProject4_display(true)}>Check Project</button> */}
                             </div>
                         </div>
                     </SwiperSlide>
@@ -194,7 +198,7 @@ function ProjectSwiper() {
                     loop={true}
                     loopedSlides={1}
                     navigation={true}
-                    autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
+                    // autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
                     onSlideChange={(index) => setAnimation(index.realIndex)}
                     coverflowEffect={{
                         rotate: 0,
@@ -209,7 +213,7 @@ function ProjectSwiper() {
                     <SwiperSlide>
                         <div className={`project_cards server ${scaleX_trigger_slide0}`}>
                             <div className="content">
-                                <h2 className='card_title'>HTTP Server</h2>
+                                <div className='card_title'>HTTP Server</div>
                                 <p className="card_description"> Designed and structured a multithreaded http server with an emphazis on modularity to ensure scalability. The server was built in the c language, and it employs the HTTP 1.1 protocol. The server handles file operations such as READ, WRITE, and APPEND.</p>
                                 <button onClick={() => setProject0_display(true)}>Check Project</button>
                             </div>
@@ -218,7 +222,7 @@ function ProjectSwiper() {
                     <SwiperSlide>
                         <div className={`project_cards stock_app ${scaleX_trigger_slide1}`}>
                             <div className="content">
-                                <h2 className="card_title">Slug Stocks</h2>
+                                <div className="card_title">Slug Stocks</div>
                                 <p className="card_description">Slug Stocks is a trading application developed in a fast pased environment by a team of 5. By leveraging the SCRUM methodology and adopting various software engineering practices, Slug Stocks successfully completed its Minimum Viable Product (MVP) within a series of sprints.</p>
                                 <button onClick={() => setProject1_display(true)}>Check Project</button>
                             </div>
@@ -227,7 +231,7 @@ function ProjectSwiper() {
                     <SwiperSlide>
                         <div className={`project_cards nasa_rover ${scaleX_trigger_slide2}`}>
                             <div className="content">
-                                <h2 className="card_title">NASA Rover</h2>
+                                <div className="card_title">NASA Rover (Internship)</div>
                                 <p className="card_description"> Designed and built a rover intended for exploration in rough terrains. Developed specific software to control the various parts of the rover, including sensors, movement, and a robotic hand used for item collection.</p>
                                 <button onClick={() => setProject2_display(true)}>Check Project</button>
                             </div>
@@ -236,7 +240,7 @@ function ProjectSwiper() {
                     <SwiperSlide>
                         <div className={`project_cards professor_class_matching ${scaleX_trigger_slide3}`}>
                             <div className="content">
-                                <h2 className="card_title">Matching App</h2>
+                                <div className="card_title">Matching App</div>
                                 <p className="card_description"> This application is designed to assist school departments in creating schedules of classes for professors and students, providing a user-friendly interface for easy viewing. Current methods can be complex and time-consuming, but with this application, the process becomes simplified and efficient.</p>
                                 <button onClick={() => setProject3_display(true)}>Check Project</button>
                             </div>
@@ -245,9 +249,9 @@ function ProjectSwiper() {
                     <SwiperSlide>
                         <div className={`project_cards shooting_range ${scaleX_trigger_slide4}`}>
                             <div className="content">
-                                <h2 className="card_title">Shooting Target</h2>
+                                <div className="card_title">Shooting <div>Target</div></div>
                                 <p className="card_description"> COMING SOON!</p>
-                                <button onClick={() => setProject4_display(true)}>Check Project</button>
+                                {/* <button onClick={() => setProject4_display(true)}>Check Project</button> */}
                             </div>
                         </div>
                     </SwiperSlide>

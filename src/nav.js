@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 
 function NavBar() {
-    const [showNav, setShowNav] = useState(false);
+    const [showNav, setShowNav] = useState(true);
+
     const onClick = () => {
         setShowNav(!showNav);
     }
@@ -31,10 +32,10 @@ function NavBar() {
                         </div>
                     </a>
                     <ul className='nav_ul'>
-                        <li><a href="#main_page">Home</a></li>
-                        <li><a href="#projects_slider">Projects</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="#main_page" >Home</a></li>
+                        <li><a href="#projects_slider" >Projects</a></li>
+                        <li><a href="#skills" >Skills</a></li>
+                        <li><a href="#about" >About</a></li>
                     </ul>
                     <button className='resume_button' onClick={() => { window.open('/Resume-2023.pdf', '_blank'); }}>Resume</button>
 

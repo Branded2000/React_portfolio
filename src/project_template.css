@@ -127,8 +127,8 @@
   font-size: 20px;
 }
 
+.command,
 .p_container ul li,
-.p_container strong,
 .p_container em {
   font-family: "VT323", monospace;
   font-size: 20px;
@@ -138,7 +138,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 11px;
+  font-size: 20px;
+}
+
+.tools_used > * {
+  font-family: "VT323", monospace;
 }
 
 .img_ {
